@@ -1,0 +1,571 @@
+/* -------------------------
+CSS TABLE OF CONTENTS
+
+# BASE CONTENT (GLOBALS)
+  # RESET
+  # COLORS
+  # TYPOGRAPHY
+        # BODY
+        # HEADINGS
+        # PARAGRAPHS
+        # LINKS
+        # LISTS
+        # BLOCK QUOTES
+        # HELPERS
+    # MEDIA
+        # IMAGEES (Responsive)
+    # COMPORNENTS/UI ELEMENTS
+        # BUTTONS
+# BASE LAYOUT
+    # CONTENER
+    # MEDIA QUERIES
+    # GRID SYSTEM
+ # SITE STRUCTURE
+    # SITE HEADER
+        # SITE ID
+    # SITE MAIN
+    # SITE FOOTER
+    # SITE NAVIGATION
+        # TOGGLE NAV
+# SECTIONS
+# SUB PAGES
+
+
+    ------------------------ */
+ /* GLOVAL RESETS */
+
+    body { margin: 0;}
+    * { box-sizing: border-box; }
+
+
+
+/* TYPOGRAPHY */
+body {
+    font-family: miller-banner, serif;
+    font-size: 100%; /* This sets the value of 1em */
+    line-height: 1.4;
+    color: rgb(82, 81, 81);
+}
+
+
+/* HEADINGS */
+ h1, h2, h3, h4, h5, h6 {
+     margin: .5em 0;
+    font-weight: normal;
+    font-family: eurostile, sans-serif;
+}
+
+h1 {
+    font-size: 3em; /* 48px based on a 16px em */
+    line-height: 1;
+}
+h2{
+    font-size: 2.25em; /* 36px based on a 16px em */
+    line-height: 1.1;
+}
+h3 {
+    font-size: 1.5em; /* 24px based on a 16px em */
+    line-height: 1.2;
+}
+h4 {
+    font-size: 1.3125em; /* 21px based on a 16px em */
+    line-height: 1.3;
+}
+h5 {
+    font-size: 1.125em; /* 18px based on a 16px em */
+}
+h6 {
+    font-size: 1em; /* 16px based on a 16px em */ 
+}
+
+/* PARAGRAPHS */
+p {
+    max-width: 35em; 
+}
+
+/* TYPE SPECIMEN */
+h2.section-head {
+   text-align: center;
+}
+h5 {
+  width: 500px;
+  margin: 50px auto;
+  text-align: center;
+   
+}
+
+/* LINKS */
+h1 {
+    font-family: eurostile, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(194, 47, 140);
+}
+a:hover {
+    text-decoration: none;
+    color:pink;
+}
+
+/* HELPERS */
+@media(min-width:768px){
+.hideonlarge {
+    visibility: hidden;
+}
+}
+/* MEDIA */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* BUTTON */
+.button,button,input[type="submit"] {
+    font-family: eurostile, sans-serif;
+    font-size: 1em;
+    display: inline-block;
+    background-color:rgb(88, 70, 64);
+    color: white;
+    padding: 1em 2em;
+    border-radius: 2em;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    line-height: 1;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.button:hover,button:hover,input[type="submit"]:hover {
+color: rgb(146, 215, 223);
+background:rgb(27, 22, 20) ;
+text-decoration: none;
+}
+.button.alt {
+    background-color: transparent;
+    color:rgb(88, 70, 64);
+    border: 1.5px solid rgb(88, 70, 64);
+    font-size: .95em;
+}
+.button.alt:hover {
+    color: rgb(146, 215, 223);
+    background-color: transparent;
+    border: 1.5px solid rgb(39, 23, 20);
+    }
+
+/* BASE LAYOUT */
+
+
+/* FOR SMALL-SIZE SCREEENS (and larger) */
+body {
+    font-size: 87.5%  /*  14px */ ;
+}
+
+/* CONTAINER */
+.container {
+    margin: 0 auto;
+    padding: 0 1em;
+    /* overflow-x: hidden; */
+}
+
+/* MEDIA QUERES */
+  /* FOR MID-SIZE SCREEENS/TABLETS */
+@media (min-width:768px) {  
+}
+
+ /* FOR LARGE-SIZED SCREEENS/LAPTOPS */
+@media (min-width:1000px) {
+   body { font-size: 100%; }
+        .container { max-width: 1000px; }
+    }
+    
+  /* FOR EXTRA-LARGE-SIZE SCREEENS/DESKTOP MONITORS */
+@media (min-width:1200px) {
+    body { font-size: 112.5%; }
+        .container { max-width: 1200px; }
+}
+
+/* GRID SYSTEM */
+.column {
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+@media (min-width:768px) {  
+  .row {
+      display: flex;
+      margin-left: -1%;
+      margin-right: -1%;
+  }
+  .column {
+    flex-grow: 0;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+    .one-whole { width: 100%}
+    .one-half { width: 48%}
+    .one-third { width: 31.333%}
+    .push-one-third { margin-left: 34.333%;}
+    .two-thirds { width: 64.6666%}
+    .one-fourth { width: 23%}
+    .three-fourth { width: 69%}
+    .push-one-fourth { margin-left: 26%;}
+    .push-one-half { margin-left: 51%;}
+    .push-one-third { margin-left: 34.333%;}
+
+    .row.centered {
+        justify-content: center;
+    }
+    .column.one-half {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 450px;
+    }
+}
+
+
+
+/* SITE STURCTURE */
+
+/* SITE HEADER */
+header.site-header  {
+    margin: 0;
+    padding: 50px 0 50px 45px;
+    font-family: eurostile, sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 450px;
+    background-color: white;
+}
+
+.site-header {
+    padding: 1em .5em 2em .5em; 
+   
+}
+
+
+@media (min-width: 768px) {
+    header.site-header .container {
+        display: block;
+        /* justify-content: space-between;    */
+    }
+}
+
+.site-header a,
+.site-footer a {
+    color: rgba(83, 82, 82, 0.8);
+    text-decoration: none;
+}
+.site-header a:hover,
+.site-footer a:hover {
+    color: rgb(218, 73, 21);
+}
+
+/* SITE FOOTER */
+.site-footer nav.site-nav ul {
+  padding: 1em .5em 2em .5em; 
+  font-family: eurostile, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+} 
+
+.site-footer .site-info-menu ul li {
+    list-style: none;
+    max-width: 200px;
+    border: solid 1px blue;  
+}
+.site-info-menu li {
+    color: white;
+}
+
+
+footer {
+    background-image: url(../img/footer-bg.jpg);
+    background-size: cover; 
+}
+
+
+/* SITE ID (LOGO) */
+.site-id h1 {
+     font-size: 1.5em;
+     margin: 0;
+     text-align: center;
+     display: inline-block;
+     align-items: center;
+    
+}
+.site-id a {
+    display: inline-block;
+    padding: .25em 0;
+}
+
+
+
+
+/* SITE NAV (Primary Top Nav) */
+.site.site-nav ul {
+    /* display: flex; 
+    justify-content: center;
+    flex-wrap: wrap; */
+    margin: 0; 
+    padding: 0;
+}
+.site-nav li {
+    list-style: none;
+}
+.site-nav a {
+   display: block;
+   padding: .5em 1em;
+}
+
+
+
+/* MENU BUTTON */
+.menu-button {
+    position: absolute;
+    left: -9999px;
+    padding: .5em;
+}
+.menu-button:hover {
+  cursor: pointer;
+}
+.menu-button::selection {
+    color: none;
+    background: none;
+}
+
+/* TOGGLE NAV */
+@media (max-width: 767px) {
+
+  .toggle-nav .site-id h1 {
+       text-align: left;
+    }
+.toggle-nav .menu-button {
+    position: absolute;
+    left: auto;
+    top: 1em;
+    right: 1.5em;
+}
+
+.toggle-nav .site-nav {
+    text-align: left;
+}
+
+/* HIDE NAV ON SMALL SCREEN BY DEFAULT */
+.toggle-nav .site-nav ul {
+    position: absolute;
+    left: -9999px;
+}
+
+
+/* SHOW NAV ON SMALL SCREENS WHEN EXPANDED CLASS IS TOGGLE */
+.toggle-nav.expanded .site-nav ul {
+    position: static;
+    left: auto;
+    display: block;
+    margin-top: 1em;
+    /* transition: all .5s ease;  */
+  
+}
+.toggle-nav.expanded .site-nav a {
+   background: rgb(88, 70, 64);
+  color: rgba(255, 255, 255, 1);
+    margin: .5em 0;
+    padding: 1em;
+    }
+}
+.toggle-nav.expanded .site-nav a:hover {
+    background:rgb(27, 22, 20) ;
+}
+
+/*  ANIMATION THE TOGGLE NAV */
+.toggle-nav .site-nav ul {
+    transition: all 1s ease;
+    max-height: 0;
+}
+.toggle-nav.expanded .site-nav ul {
+    /* transition: all 1s ease; */
+    max-height: 400px;
+}
+
+
+/* NAVICON */
+.navicon {
+    color: rgba(0,0,0,0);
+    padding: 0;
+}
+
+.navicon::after {
+    content: "\2630";
+    color: rgba(0,0,0,1);
+    display: inline-block;
+    font-size: 1.5em;
+    transform: rotate(0deg);
+}
+.expanded .navicon::after {
+    content: "\2715";
+    transform: rotate(-90deg);
+    transition: all .4s ease-out;
+}
+
+/* SITE MAIN (Main Content Area) */
+
+
+/* SECTION */
+section {
+    padding: 4em 0;
+}
+
+#hero {
+  margin-left: auto;
+  margin-right: auto;
+    /* padding: 6em 1em; */
+}
+#hero {
+    background-image: url(../img/3rings.jpg);
+    background-size: cover;
+}
+
+
+#hero h2 {
+    font-size: 4em;
+    line-height: 1; 
+}
+
+#hero p {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-left: 5%;
+}
+
+.menu-dropdown li {
+    list-style: none;
+}
+
+#collection {
+    background-image: url(../img/collection-bg-2000x1200.jpg);
+    background-size: cover;
+}
+
+/* ARTICLE */
+#hero p {
+    margin-left: auto;
+    margin-right: auto;
+
+}
+article {
+    padding: 4em 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+article .date + p::first-letter {
+color: rgba(0,0,0,.8);
+font-size: 5.6em;
+line-height: .9;
+font-weight: bold;
+float: left;
+margin: 0 .2em 0 0;
+padding: 0;
+display: block;
+}
+article .date + p::first-line {
+    color: rgba(0,0,0,.8);
+   text-transform: uppercase;
+   font-weight: bold;
+    }
+
+blockquote{
+    font-size: 1.5em;
+    line-height: 1.2em;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+label, input {
+    display: block;
+}
+label, input[type="text"],textarea {
+   width: 100%;
+}
+input, textarea {
+    background-color: rgba(0, 0, 0, .05);
+    border: 1px solid rgba(0, 0, 0, .2);
+    padding: 1em;
+    font-size: inherit;
+}
+label {
+    margin-top: 1em;
+    margin-bottom: .5em;
+}
+input[type="text"] {
+    margin-top: 1em;
+}
+#contactinfo a {
+    color:rgb(146, 215, 223);
+}
+
+/* -------------------------- */
+/* -------------------------- */
+/* -------------------------- */
+
+
+
+/* FOR LAYOUT DEMO PURPOSES ONLY */
+.demo .column {
+    background: rgba(0, 0, 0, .2);
+    padding: .5em;
+    text-align: center;
+}
+
+.demo .column p {
+    max-width: none;
+}
+
+/* FOR SMALL-SIZED SCREENS (and Larger) */
+body.demo::before {
+    content: "Small Screen (0 - 767px)";
+    display: block;
+    background: red;
+    color: white;
+    text-align: center;
+    padding: .2em;
+    font-size: .8em;
+}
+
+/* FOR MID-SIZED SCREENS (and Larger) */
+@media (min-width: 768px) {
+    body.demo::before {
+        content: "Mid Screen (768px - 999px)"; 
+        background: blue;  
+    }
+}
+
+/* FOR LARGE-SIZED SCREENS/LAPTOPS (and Larger) */
+@media (min-width: 1000px) {
+    body.demo::before {
+        content: "Large Screen (1000px - 1199px)"; 
+        background: green;  
+    }
+}
+
+/* FOR EXTRA LARGE-SIZED SCREENS/DESKTOP MONITOP (and Larger) */
+@media (min-width: 1200px) {
+    body.demo::before {
+        content: "ED-Large Screen (1000px - 1199px)"; 
+        background: green;  
+    }
+}
+
+
+
+
+
+
+
+
+
