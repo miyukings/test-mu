@@ -24,71 +24,102 @@
 
 
     <header class="site-header">
-        <div class="container">
-            <div class="site-id">
-                <h1><img src="img/mu-iconO.png" width="50px" height="50px"></h1>
-                <h1><a href="index.html"><img src="img/logo_black.png" width="100px" height="50px"></a></h1>
 
-            </div>
-            <nav class="site-nav">
-                <div class="menu-button navicon">Menu </div>
-
-                <ul>
-                    <li><a href="index.html">Collection</a></li>
-                    <li><a href="about.html">Background</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="contact.html">Account</a></li>
-
-                </ul>
-            </nav>
+        <div class="site-id">
+            <h1><img src="img/mu-iconO.png" width="50px" height="50px"></h1>
+            <h1><a href="index.html"><img src="img/logo_black.png" width="100px" height="50px"></a></h1>
         </div>
+
     </header>
+
 
     <main>
         <section id="hero">
+
             <div class="main-content">
+                <div class="container">
+                    <img class="big-logo" src="img/logo_orange1000x457.png" alt="Mu Logo">
 
-                <div class="big-logo">
-                    <img src="img/logo_orange1000x457.png" alt="Mu Logo">
                 </div>
-
-            </div>
-
-        </section>
-
-        <section>
-            <div class="container two-col-sidebar">
-                <aside>
-
-
-
-
-
-
-
-                </aside>
-
-
             </div>
 
 
+            <nav class="side-menu">
+                <div class="menu-box">
+                    <ul>
+                        <li class="main-b"><a href="index.html">Collection</a></li>
+                        <div class="collection-menu">
+                            <ul>
+                                <li><a href="#">Planets</a></li>
+                                <li><a href="#">Sputnik</a></li>
+                                <li><a href="#">Flower</a></li>
+                                <li><a href="#">Geometric</a></li>
+                            </ul>
+                        </div>
+
+                        <li class="main-b"><a href="#about">Background</a></li>
+                        <li class="main-b"><a href="#contact">Contact Us</a></li>
+                        <li class="main-b"><a href="account.html">Account</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+
 
         </section>
+
+
         <section id="collection">
-            <div class="metal-bg">
-
-
+            <div class="container">
                 <h2 class="section-head">Collection</h2>
                 <h5>Discover Your New Style!</h5>
+
+                <div class="gallary-row">
+                    <div class="column one-fifth">
+                        <img src="img/flower-ring1500x1500.png" alt="Flower Ring">
+                        <h6 class="p-title">Flower</h6>
+                        <p class="p-mane">Ring<span>-F02</span></p>
+                        <p class="price">$180</p>
+                    </div>
+                    <div class="column one-fifth">
+                        <img src="img/spikyring-cutout1500x1500.png" alt="Planet Ring">
+                        <h6 class="p-title">Planet</h6>
+                        <p class="p-mane">Ring<span>-P02</span></p>
+                        <p class="price">$350</p>
+                    </div>
+                    <div class="column one-fifth">
+                        <img src="img/geometric-bangle1500x1500.png" alt="Geometric Bangle" width="300px"
+                            height="300px">
+                        <h6 class="p-title">Geometric</h6>
+                        <p class="p-mane">Bangle<span>-G01</span></p>
+                        <p class="price">$420</p>
+                    </div>
+                    <div class="column one-fifth">
+                        <img src="img/geometric-ring1500x1500.png" alt="Geometric Ring">
+                        <h6 class="p-title">Geometric</h6>
+                        <p class="p-mane">Ring<span>-G01 Onyx</span></p>
+                        <p class="price">$250</p>
+                    </div>
+                    <div class="column one-fifth">
+                        <img src="img/sputnik1500x1500-t.png" alt="Sputnik Ring">
+                        <h6 class="p-title">Sputnik</h6>
+                        <p class="p-mane">Ring<span>-S01 Turquoise</span></p>
+                        <p class="price">$380</p>
+                    </div>
+
+                </div>
             </div>
+
         </section>
 
         <section id="about">
-            <h2 class="section-head">Background</h2>
-            <h5>In the Japanese language, “無” means nothingness. We try to maintain our minds every time fresh to create
-                new things using our creativity and uniqueness.</h5>
-
             <div class="container">
+                <h2 class="section-head">Background</h2>
+                <h5>In the Japanese language, “無” means nothingness. We try to maintain our minds every time fresh to
+                    create
+                    new things using our creativity and uniqueness.</h5>
+
+
                 <div class="row">
                     <div class="column one-half">
                         <img src="img/kolar-unsplash.jpg" alt="Metal texture">
@@ -111,12 +142,13 @@
             </div>
 
 
-            </div>
+
         </section>
 
         <section id="contact">
-            <h2 class="section-head">Contact Us</h2>
+
             <div class="container">
+                <h2 class="section-head">Contact Us</h2>
                 <div class="row">
                     <div class="column one-half">
                         <h3>Customer care</h3>
@@ -137,9 +169,25 @@
                     <div class="column one-half">
                         <h3>Contact Information</h3>
                         <h4>Customer Support Desk</h4>
-                        <p>Tel:1-808-123-4567</p>
-                        <p>Monday - Friday: 9am – 6pm (HST)</p>
-                        <p>Sunday & Saturday: Closed</p>
+                        <p class="info">Tel:<span>1-808-123-4567</span></p>
+                        <p class="info">Monday - Friday:<span>9am – 6pm (HST)</span></p>
+                        <p class="info">Sunday & Saturday:<span>Closed</span></p>
+
+                        <div class="contact-form">
+                            <h4>Contact Customer Support</h4>
+                            <form action="#">
+                                <label for="yourname">Your Name</label>
+                                <input type="text" id="yourname" name="yourname" />
+
+                                <label for="youremail">Your Email</label>
+                                <input type="text" id="youremail" name="youremailname" />
+
+                                <label for="yourmessage">Your Message</label>
+                                <textarea name="yourmessage" id="yourmessage" cols="30" rows="10">
+                        </textarea>
+                                <input type="submit" value="Submit">
+                            </form>
+                        </div>
                     </div>
 
                 </div>
@@ -150,25 +198,25 @@
 
     <footer class="site-footer">
 
-        <nav class="site-nav">
+        <!-- <nav class="site-nav">
             <ul>
                 <li><a href="#hero">Top</a></li>
                 <li><a href="#collection">Collection</a></li>
                 <li><a href="#about">Background</a></li>
                 <li><a href="#contact">Contact Us</a></li>
             </ul>
-        </nav>
-        <div class="container">
-            <div class="site-info-menu">
-                <ul>
-                    <li><a href="#">Online Shop</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Terms and Conditions</a></li>
-                    <li><a href="#">Exchange and Return</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
+        </nav> -->
+
+        <div class="site-info-menu">
+            <ul>
+                <li><a href="#">Online Shop</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Terms and Conditions</a></li>
+                <li><a href="#">Exchange and Return</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
         </div>
+
     </footer>
 
 

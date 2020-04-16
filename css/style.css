@@ -44,7 +44,7 @@ body {
     font-family: miller-banner, serif;
     font-size: 100%; /* This sets the value of 1em */
     line-height: 1.4;
-    color: rgb(82, 81, 81);
+    color: rgba(31, 30, 30, 0.8);
 }
 
 
@@ -87,11 +87,10 @@ p {
 h2.section-head {
    text-align: center;
 }
-h5 {
+#about h5, #collection h5 {
   width: 500px;
   margin: 50px auto;
-  text-align: center;
-   
+  text-align: center;  
 }
 
 /* LINKS */
@@ -101,11 +100,11 @@ h1 {
 
 a {
     text-decoration: none;
-    color: rgb(194, 47, 140);
+    color: rgba(31, 30, 30, 0.8);
 }
 a:hover {
     text-decoration: none;
-    color:pink;
+    color:rgb(218, 73, 21);
 }
 
 /* HELPERS */
@@ -125,15 +124,15 @@ img {
     font-family: eurostile, sans-serif;
     font-size: 1em;
     display: inline-block;
-    background-color:rgb(88, 70, 64);
-    color: white;
-    padding: 1em 2em;
+    background-color:black;
+    color: rgb(218, 73, 21);
+    padding: .5em 2em;
     border-radius: 2em;
     text-transform: uppercase;
     letter-spacing: .05em;
     line-height: 1;
     text-align: center;
-    margin-top: 1em;
+    margin-top: .5em;
 }
 
 .button:hover,button:hover,input[type="submit"]:hover {
@@ -163,9 +162,11 @@ body {
 
 /* CONTAINER */
 .container {
-    margin: 0 auto;
+    margin-left: 300px;
+    margin-right: auto;
     padding: 0 1em;
     /* overflow-x: hidden; */
+    border: solid 1px rgb(6, 85, 41);
 }
 
 /* MEDIA QUERES */
@@ -197,17 +198,25 @@ body {
       margin-left: -1%;
       margin-right: -1%;
   }
+  .gallary-row {
+    display: flex;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
   .column {
     flex-grow: 0;
     margin-left: 1%;
     margin-right: 1%;
+    border: solid 1px red;
 }
     .one-whole { width: 100%}
-    .one-half { width: 48%}
+    .one-half { width: 37.5%}
     .one-third { width: 31.333%}
     .push-one-third { margin-left: 34.333%;}
     .two-thirds { width: 64.6666%}
     .one-fourth { width: 23%}
+    .one-fifth { width: 18.4%}
     .three-fourth { width: 69%}
     .push-one-fourth { margin-left: 26%;}
     .push-one-half { margin-left: 51%;}
@@ -230,19 +239,17 @@ body {
 /* SITE HEADER */
 header.site-header  {
     margin: 0;
-    padding: 50px 0 50px 45px;
     font-family: eurostile, sans-serif;
+    width: 25%;
+    background-color: transparent;
     position: fixed;
-    top: 0;
-    left: 0;
-    max-width: 25%;
-    height: 450px;
-    background-color: white;
 }
 
 .site-header {
-    padding: 1em .5em 2em .5em; 
-   
+    padding: 0;  
+}
+.site-header .container {
+    padding: 0;
 }
 
 
@@ -291,18 +298,16 @@ footer {
 /* SITE ID (LOGO) */
 .site-id h1 {
      font-size: 1.5em;
-     margin: 0;
-     text-align: center;
-     display: inline-block;
-     align-items: center;
-    
+     display: inline-block;    
 }
 .site-id a {
     display: inline-block;
     padding: .25em 0;
 }
-
-
+header.site-header {
+    padding-left: 50px;
+    
+}
 
 
 /* SITE NAV (Primary Top Nav) */
@@ -313,13 +318,26 @@ footer {
     margin: 0; 
     padding: 0;
 }
-.site-nav li {
+.side-menu li {
     list-style: none;
 }
-.site-nav a {
+.side-menu a {
    display: block;
    padding: .5em 1em;
 }
+.side-menu .container {
+    padding-top: 80px;
+}
+.collection-menu ul {
+font-family: eurostile, sans-serif;
+font-weight: bolder;
+
+}
+.menu-box li.main-b {
+    font-family: eurostile, sans-serif;
+   font-size: 1.2em;
+    font-weight: bold;
+    }
 
 
 
@@ -419,39 +437,127 @@ section {
     padding: 4em 0;
 }
 
-#hero {
-  margin-left: auto;
-  margin-right: auto;
-    /* padding: 6em 1em; */
+h2.section-head {
+    color: black;
 }
+
+/* HERO SECTION */
 #hero {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0;
+      /* padding: 6em 1em; */
+   
+}
+#hero .container {
+    display: inline-block;
+  
+}
+#hero .main-content .container {
     background-image: url(../img/3rings.jpg);
     background-size: cover;
-    max-width: 75%;
-    margin-right: 0;
-}
-
-
-#hero .main-content {
     float: right;
+    width: 75%;
+    height: auto;
+    text-align: center;
+    
+}
+#hero .side-menu .menu-box {
+    float: left;
+    width: 25%;
+    height: 500px;
+    position: fixed;
+    padding-top: 80px;
+}
+img.big-logo {
+   margin-top: 200px;
 }
 
 .main-content .big-logo {
     max-width: 400px;
-}
-header {
-    float: left;
 }
 
 .menu-dropdown li {
     list-style: none;
 }
 
-#collection {
+/* COLLECTION SECTION */
+#collection .container {
     background-image: url(../img/collection-bg-2000x1200.jpg);
     background-size: cover;
-    clear: both;
+    float: right;
+    width: 75%;
+    height: auto;
+    text-align: center;
+    clear: both;  
 }
+#collection img {
+    background-color: white;
+    border-radius: 50%;
+}
+.column.one-fifth h6 p {
+    color: white;
+}
+
+h6.p-title {
+    color: black;
+    text-transform: uppercase;
+    line-height: .1em;
+    padding-top: 20px;
+}
+
+p.p-mane {
+    color: black;
+    font-family: eurostile, sans-serif;
+    font-weight: bold;
+    line-height: .1em;
+    
+}
+p.p-mane span {
+    color: black;
+    font-family: eurostile, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    line-height: .1em;
+}
+
+p.price {
+    color: black;
+    font-family: eurostile, sans-serif;
+    font-weight: 100;
+    font-style: italic;
+    font-size: .8em;
+    line-height: .1em;
+    padding-bottom: 50px;
+}
+
+/* CONTACT SECTION */
+#contact h3 {
+    font-family: miller-banner, serif;
+    font-style: italic;
+    font-weight: bold;
+}
+#contact h4 {
+  font-family: miller-banner, serif; 
+  padding-top: 15px; 
+}
+.contact-form {
+    padding-top: 10px;
+}
+
+#contact span {
+    font-style: italic;
+}
+#contact p.info {
+    line-height: .3em;
+}
+
+#contact blockquote {
+    font-family: eurostile, sans-serif;
+}
+
+
+
 
 /* ARTICLE */
 #hero p {
@@ -487,25 +593,28 @@ blockquote{
     font-style: italic;
     font-weight: bolder;
 }
-
+label {
+    font-family: eurostile, sans-serif;
+}
 label, input {
     display: block;
 }
 label, input[type="text"],textarea {
    width: 100%;
+   line-height: 1em;
 }
 input, textarea {
-    background-color: rgba(0, 0, 0, .05);
     border: 1px solid rgba(0, 0, 0, .2);
-    padding: 1em;
+    padding: .5em;
     font-size: inherit;
 }
 label {
-    margin-top: 1em;
-    margin-bottom: .5em;
+    margin-top: .5em;
+    margin-bottom: 0;
 }
 input[type="text"] {
-    margin-top: 1em;
+    margin-top: .5em;
+    margin-bottom: .2em;
 }
 #contactinfo a {
     color:rgb(146, 215, 223);
